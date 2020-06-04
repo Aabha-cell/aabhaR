@@ -1,0 +1,22 @@
+
+{%extends 'animals/base.html'%}
+
+{% block title %}
+Fill cat info
+{% endblock %}
+{% block content %}
+	<div>
+        <h1>Add Information</h1>
+    </div>
+{% endblock %}
+
+{% block info %}
+
+<form method="post" action="/newcat/">
+	{% csrf_token %}
+	{{form.as_p}}
+	<button type="submit" name="save" class="btn btn-primary btn-lg">Submit</button>	
+</form>
+
+{% endblock %}
+

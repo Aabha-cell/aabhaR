@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>{% block title %}Animal name{% endblock %}</title>
+
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/animals.css' %}">
+
+</head>
+<body>
+	<ul>
+
+ 	    <li><a class="active" href="/">Home</a></li>
+  		<li><a href="/cat/">Adopt a cat</a></li>
+  		<li><a href="/dog/">Adopt a dog</a></li>
+  		<li><a href="/newcat/">Post cat for adoption</a></li>
+  		<li><a href="/newdog/">Post dog for adoption</a></li>
+
+	</ul>
+	
+	<div style="margin-left:25%;padding:1px 16px;height:1000px;">
+		<div>
+			{% block content %}
+	        <h1>Animal For Adoption</h1>
+			{% endblock %}
+	    </div>
+
+	    <div>
+	    	{% block info %}
+
+	    	{% endblock %}
+	    </div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+</html>

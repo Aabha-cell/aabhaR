@@ -1,0 +1,33 @@
+{%extends 'animals/base.html'%}
+
+{% block title %}
+Cat
+{% endblock %}
+
+{% block content %}
+	<div>
+        <h1>Cats For Adoption</h1>
+    </div>
+{% endblock %}
+
+{% block info %}
+
+
+	{% for cat in cats %}
+	{% if cat.gender == 'F' %}
+	<div>
+		<p><h2><strong> Name: </strong> {{cat.name}}</h2></p>
+		<p><strong> Age: </strong> {{cat.age}}</p>
+		<p><strong> Breed: </strong> {{cat.breed}}</p>
+		<p><strong> Weight: </strong> {{cat.weight}}</p>
+		<p><strong> Note: </strong> {{cat.note}}</p>
+		<p><strong> Vaccinated: </strong> {{cat.vaccinated}}</p>
+		<p><strong> Gender </strong> {{cat.gender}}</p>
+		<br>
+	</div>
+	{% endif %}
+	{% endfor %}
+
+
+{% endblock %}
+

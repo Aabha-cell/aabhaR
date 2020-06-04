@@ -1,0 +1,29 @@
+{%extends 'animals/base.html'%}
+
+{% block title %}
+Dog
+{% endblock %}
+
+{% block content %}	
+   <div>
+        <h1>Dogs For Adoption</h1>
+    </div>    
+{% endblock %}
+
+{% block info %}
+
+	{% for dog in dogs %}
+	<div>
+		<p><h2><strong> Name: </strong> {{dog.name}}</h2></p>
+		<p><strong> Age: </strong> {{dog.age}}</p>
+		<p><strong> Breed: </strong> {{dog.breed}}</p>
+		<p><strong> Weight: </strong> {{dog.weight}}</p>
+		<p><strong> Note: </strong> {{dog.note}}</p>
+		<p><strong> Vaccinated: </strong> {{dog.vaccinated}}</p>
+		<p><strong> Gender: </strong> {{dog.gender}}</p>
+		<br>
+	</div>
+	{% endfor %}
+
+{% endblock %}
+
